@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 8px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 52px;    
+}
+
+.logo{
+    width: 148px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid lightcoral;
+    border-radius: 4px;
+    padding: 7px 30px;
+}
+
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+
+.signIn-btn{
+    padding: 7px 14px;
+    margin-left: 15px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1{
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header-content p{
+    font-size: 22px;
+}
+
+.email-signUp{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    overflow: hidden;
+}
+
+.email-signUp input{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    outline: 0;
+    padding: 18px 36px;
+    color: #fff;
+}
+
+.email-signUp button{
+    background: #db0001;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight:600;
+    cursor: pointer;
+    padding: 16px 28px;
+}
+
+.divider-1{
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    background-color: rgb(35,35,35);
+}
+
+.divider{
+    width: 100%;
+    height: 8px;
+    margin-left: -10%;
+    position: absolute;
+    background-color: rgb(35,35,35);
+}
+
+/*-----------features ----------*/
+
+.features{
+    padding: 50px 10%;
+    font-size: 24px;
+    font-weight:100;
+    line-height: 35px;
+}
+
+.row{
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 50px;
+
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.features h2{
+    font-size: 45px;
+    font-weight:800;
+    margin-bottom: 30px;
+    line-height: 55px;
+}
+
+/* --------fAQ--------- */
+
+.faq{
+    padding: 5px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-size: 46px;
+    margin-top: 80px;
+    font-weight: 600;
+}
+
+.questions{
+    margin: 60px auto;
+    width: 100%;
+    /* max-width: 750px; */
+    margin-bottom: 20px;
+}
+
+.questions li{
+    list-style: none;
+    width: 100%;
+    padding: 4px;
+}
+
+.questions li label{
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 200;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.content{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+label::after{
+    content: '+';
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.questions .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.questions input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.questions input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.faq .email-signUp{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small{
+    font-size: 20px;
+}
+
+/* --------footer------- */
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 8px solid #333 ;
+    color: gray;
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
